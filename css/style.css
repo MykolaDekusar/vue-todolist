@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(235, 235, 233);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header img {
+    vertical-align: middle;
+    padding: 10px 0;
+    margin: 0 5px 0 20px;
+}
+
+/* IMPOSTO GRANDEZZA TITOLO E FONT */
+#titolo_logo {
+    vertical-align: middle;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CREO IL CONTAINER CON IL BACKGROUND */
+body {
+    height: 100vh;
+}
+
+.container {
+    width: 1200px;
+    margin: 50px auto;
+    background-color: rgb(235, 235, 233);
+    border-radius: 10px;
+}
+
+/* IMPOSTO LO STILE E COLORE DEI BOTTONI */
+.bottoni {
+    padding: 40px 0 40px 0;
+    border-bottom: 1px solid gray;
+    padding-left: 60px;
+}
+
+#first_bttn {
+    padding: 5px 10px;
+    background-color: rgba(81, 156, 242, 0.724);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#second_bttn {
+    padding: 5px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: gray;
+}
+
+.list {
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+.bottoni textarea{
+    transform: translate(0,5px);
+}
+
+/* TOLGO LO STILE DEI PUNTINI ALLA LISTA */
+ul {
+    list-style: none;
+    padding: 10px;
+}
+
+/* IMPOSTO GRANDEZZA TITOLO LISTA */
+.big_text {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 30px;
+}
+
+/* IMPOSTO GRANDEZZA FRECCIA */
+.arrow {
+    font-size: 25px;
+    height: 10px;
+}
+
+/* CREO CERCHIO VERDE */
+
+.green_circle {
+    color: rgb(11, 186, 11);
+    border: 1px solid;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* CREO CERCHIO ROSSO */
+.red_circle {
+    color: red;
+    padding: 2px 5px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* MODIFICO LO STILE E LA DIMENSIONE DEGLI ELEMENTI LISTA */
+li {
+    margin: 15px 0px 0px 0px;
+    font-size: 18px;
+    font-family: Verdana, Tahoma, sans-serif;
+
+}
+
+/* CREO LE PARTI COLORATE CHE VANNO MESSE VICINO AGLI ELEMENTI DELLA LISTA */
+.grafica {
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 10px;
+    color: white;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.blu {
+    background-color: rgba(81, 156, 242, 0.724);
+}
+
+.viola {
+    background-color: rgba(137, 43, 226, 0.696);
+}
+
+.verde {
+    background-color: rgba(0, 128, 0, 0.461);
+}
+
+.arancione {
+    background-color: orange;
+}
+
+.rosa {
+    background-color: rgb(248, 128, 148);
+}
+
+.acido {
+    background-color: rgb(143, 225, 20);
+}
