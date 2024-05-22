@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toboolist</title>
+    <title>Interactive List Vue</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -13,36 +13,23 @@
         <span id="titolo_logo">Toboolist</span>
     </header>
     <!-- CONTENUTO -->
-    <main>
-        <!-- CONTENITORE CENTRALE -->
-        <div class="container">
+        <div class="container" id="app">
             <!-- BOTTONI -->
             <div class="bottoni">
-                    <button id="first_bttn">Add Task</button>
-                    <button id="second_bttn">Add Section</button>
-                    <textarea name="" id="" cols="50" rows="5"></textarea>
+                    <button @click="addText()" id="first_bttn">Aggiungi ToDo</button>
+                    <textarea @keyup.enter="addText()" @input="updMessage($event.target.value)"  id="taskInput" cols="50" rows="5"  placeholder="Inserisci la tua prossima task"></textarea>
+                    <button @click="removeText()" id="second_bttn">Rimuovi l'ultimo ToDo</button>
+                    
             </div>
             <!-- LISTA -->
             <div class="list">
-                <ul>
-                    <li>
-                        <span class="arrow">&#9207; </span><span class="big_text">To Do</span>
-                    </li>
-                    <li><span class="green_circle">&check;</span>Quarterly Newsletter <span class="grafica blu">Editorial</span></li>
-                </ul>
-                <ul>
-                    <li><span class="arrow">&#9207; </span><span class="big_text">Today</span>
-                        <ul>
-                            <li><span class="green_circle">&check;</span>Recruiting blog post <span class="grafica blu">Editorial</span></li>
-                            <li><span class="green_circle"> &check;</span>Mobile app launch <span class="grafica viola">Q1 Goals</span></li>
-                            <li><span class="red_circle"> &cross;</span>Interview John H. <span class="grafica verde">Recruiting</span></li>
-                            <li><span class="green_circle"> &check;</span>Summit update to mobile storefronts <span class="grafica arancione">Mobile</span></li>
-                        </ul>
-                    </li>
-                </ul>
+                <span class="arrow">&#9207; </span><span class="big_text">To Do</span>
+                <ul v-for="(lista,index) in list">
+                    <li @click="completedTask(index)"><span :class="circle_color">&cross;</span>{{lista.text}} <span @click="removeSelectedText(index)">&cross;</span></li>
+                </ul>    
             </div>
         </div>
-    </main>
-    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

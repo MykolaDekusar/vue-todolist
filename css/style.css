@@ -10,6 +10,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 header img {
@@ -42,7 +43,9 @@ body {
 .bottoni {
     padding: 40px 0 40px 0;
     border-bottom: 1px solid gray;
-    padding-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 #first_bttn {
@@ -66,13 +69,12 @@ body {
 }
 
 .bottoni textarea{
-    transform: translate(0,5px);
+    margin: 0 10px;
 }
 
 /* TOLGO LO STILE DEI PUNTINI ALLA LISTA */
 ul {
     list-style: none;
-    padding: 10px;
 }
 
 /* IMPOSTO GRANDEZZA TITOLO LISTA */
@@ -114,38 +116,4 @@ li {
     font-size: 18px;
     font-family: Verdana, Tahoma, sans-serif;
 
-}
-
-/* CREO LE PARTI COLORATE CHE VANNO MESSE VICINO AGLI ELEMENTI DELLA LISTA */
-.grafica {
-    border-radius: 15px;
-    padding: 5px 10px;
-    font-size: 10px;
-    color: white;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-.blu {
-    background-color: rgba(81, 156, 242, 0.724);
-}
-
-.viola {
-    background-color: rgba(137, 43, 226, 0.696);
-}
-
-.verde {
-    background-color: rgba(0, 128, 0, 0.461);
-}
-
-.arancione {
-    background-color: orange;
-}
-
-.rosa {
-    background-color: rgb(248, 128, 148);
-}
-
-.acido {
-    background-color: rgb(143, 225, 20);
 }
