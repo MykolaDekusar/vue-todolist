@@ -35,6 +35,7 @@ createApp({
       this.message = value;
     },
     completedTask(index) {
+      console.log(this.list);
       this.list[index].done = true;
     },
   },
