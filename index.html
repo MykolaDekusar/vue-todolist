@@ -23,10 +23,10 @@
             </div>
             <!-- LISTA -->
             <div class="list">
-                <span class="arrow">&#9207; </span><span class="big_text">To Do</span>
+                <span class="big_text"><span class="arrow">&#9207; </span >To Do</span>
                 <ul v-for="(lista,index) in list">
-                    <li v-if="lista.done"><span class="green_circle">&check;</span><s>{{lista.text}}</s><span @click="removeSelectedText(index)">&cross;</span></li>
-                    <li v-else @click="completedTask(index)"><span class="red_circle">&cross;</span>{{lista.text}} <span @click="removeSelectedText(index)">&cross;</span></li>
+                    <li v-if="lista.done" @click="completedTask(index)"><span @click="removeSelectedText(index)" class="green_circle">&check;</span><s>{{lista.text}}</s></li>
+                    <li v-else @click="completedTask(index)"><span @click="removeSelectedText(index)" class="red_circle">&cross;</span>{{lista.text}}</li>
                 </ul>    
             </div>
         </div>

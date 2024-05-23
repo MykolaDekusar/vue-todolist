@@ -18,7 +18,6 @@ createApp({
         this.initList++;
       }
       this.message = "";
-      console.log(this.initList);
       document.getElementById("taskInput").value = "";
     },
     removeText() {
@@ -26,17 +25,15 @@ createApp({
       if (this.list.length > 0) this.initList--;
     },
     removeSelectedText(index) {
-      console.log(this.list);
       this.list.splice(index, 1);
       this.initList--;
     },
     updMessage(value) {
-      console.log(value);
       this.message = value;
     },
     completedTask(index) {
-      console.log(this.list);
-      this.list[index].done = true;
+      if (this.list[index].done === true) this.list[index].done = false;
+      else if (this.list[index].done === false) this.list[index].done = true;
     },
   },
 }).mount("#app");

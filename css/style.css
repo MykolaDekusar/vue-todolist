@@ -64,8 +64,9 @@ body {
 }
 
 .list {
-    padding-left: 50px;
     padding-bottom: 30px;
+    width: 635px;
+    margin: 0 auto;
 }
 
 .bottoni textarea{
@@ -75,6 +76,8 @@ body {
 /* TOLGO LO STILE DEI PUNTINI ALLA LISTA */
 ul {
     list-style: none;
+    width: 635px;
+    
 }
 
 /* IMPOSTO GRANDEZZA TITOLO LISTA */
@@ -115,5 +118,11 @@ li {
     margin: 15px 0px 0px 0px;
     font-size: 18px;
     font-family: Verdana, Tahoma, sans-serif;
+    overflow-wrap: break-word;
+}
 
+/* UTILITIES */
+
+.ml-10 {
+    margin-left: 10px;
 }
