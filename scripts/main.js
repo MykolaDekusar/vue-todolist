@@ -8,7 +8,6 @@ createApp({
       message: "",
       list: [],
       initList: 0,
-      circle_color: "red_circle",
     };
   },
   methods: {
