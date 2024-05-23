@@ -19,14 +19,13 @@
                     <button @click="addText()" id="first_bttn">Aggiungi ToDo</button>
                     <textarea @keyup.enter="addText()" @input="updMessage($event.target.value)"  id="taskInput" cols="50" rows="5"  placeholder="Inserisci la tua prossima task"></textarea>
                     <button @click="removeText()" id="second_bttn">Rimuovi l'ultimo ToDo</button>
-                    
             </div>
             <!-- LISTA -->
             <div class="list">
-                <span class="big_text"><span class="arrow">&#9207; </span >To Do</span>
+                <span class="big_text"><span class="arrow">&#9207;</span>To Do</span>
                 <ul v-for="(lista,index) in list">
-                    <li v-if="lista.done" @click="completedTask(index)"><span @click="removeSelectedText(index)" class="green_circle">&check;</span><s>{{lista.text}}</s></li>
-                    <li v-else @click="completedTask(index)"><span @click="removeSelectedText(index)" class="red_circle">&cross;</span>{{lista.text}}</li>
+                    <li v-if="lista.done"><span @click="removeSelectedText(index)" class="green_circle">&check;</span><s @click="completedTask(index)">{{lista.text}}</s></li>
+                    <li v-else><span @click="removeSelectedText(index)" class="red_circle">&cross;</span><span @click="completedTask(index)">{{lista.text}}</span></li>
                 </ul>    
             </div>
         </div>

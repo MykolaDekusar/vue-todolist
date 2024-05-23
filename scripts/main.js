@@ -12,16 +12,19 @@ createApp({
   },
   methods: {
     addText() {
-      if (this.message !== "") {
-        this.list[this.initList] = { text: this.message, done: false };
+      if (this.message) {
+        this.list[this.initList] = {
+          text: this.message,
+          done: false,
+        };
         this.initList++;
       }
       this.message = "";
       document.getElementById("taskInput").value = "";
     },
     removeText() {
-      this.list.splice(this.initList - 1, 1);
       if (this.list.length > 0) this.initList--;
+      this.list.splice(this.initList, 1);
     },
     removeSelectedText(index) {
       this.list.splice(index, 1);
